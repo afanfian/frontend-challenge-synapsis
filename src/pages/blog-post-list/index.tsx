@@ -3,17 +3,10 @@ import Layout from '@/components/Layout'
 import Seo from '@/components/Seo'
 import { getBlogPostList } from '@/api/blog-post-list'
 import type { BlogPostList as BlogPostListType } from '@/utils/interfaces/BlogPostList'
-import Button from '@/components/Button'
 import Image from 'next/image'
 
-export default function Home() {
+export default function BlogPostList() {
   const [blogPosts, setBlogPosts] = useState<BlogPostListType[]>([])
-
-  const truncateText = (text: string, maxWords: number) => {
-    const words = text.split(' ')
-    const truncated = words.slice(0, maxWords).join(' ')
-    return words.length > maxWords ? `${truncated} ...` : truncated
-  }
 
   useEffect(() => {
     const fetchData = async () => {
@@ -33,7 +26,7 @@ export default function Home() {
       <Seo templateTitle="List Blog" />
       <div className="pt-16 pb-20 text-center text-black">
         <p className="pb-2 font-bold text-5xl  ">SYNAPSIS Blog</p>
-        <p className="text-2xl">Welcome to Synapsis Blog!</p>
+        <p className="text-2xl">Welcome to Synapsis Blog Post List!</p>
       </div>
       <div className="grid md:grid-cols-3 px-36 gap-3">
         {blogPosts &&
@@ -49,11 +42,8 @@ export default function Home() {
               />
               <p className="font-bold text-xl text-gray-800">{post.title}</p>
               <p className="pb-5 font-medium text-lg text-gray-500">
-                {truncateText(post.body, 10)}
+                {post.body}
               </p>
-              <Button variant="primary">
-                <a href={`/blog-post-list`}>Read more</a>
-              </Button>
             </div>
           ))}
       </div>

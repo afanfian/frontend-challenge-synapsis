@@ -1,8 +1,8 @@
 import React from 'react'
-import { FaTimes } from 'react-icons/fa'
-import { CiMenuFries } from 'react-icons/ci'
 import Image from 'next/image'
 import Link from 'next/link'
+import { FaTimes } from 'react-icons/fa'
+import { CiMenuFries } from 'react-icons/ci'
 
 export default function Navbar() {
   const [click, setClick] = React.useState(false)
@@ -14,13 +14,13 @@ export default function Navbar() {
       <div className="w-full lg:hidden block absolute top-24  left-0 right-0 z-10 pt-5 text-white bg-slate-900 transition">
         <ul className="text-center text-xl p-2">
           <li className="my-4 py-4 border-b border-slate-800 hover:border-synapsis-secondary hover:rounded">
-            <Link href="/list-blog">List Blog</Link>
+            <Link href="/blog-post-list">Blog Post List</Link>
           </li>
           <li className="my-4 py-4 border-b border-slate-800 hover:border-synapsis-secondary hover:rounded">
-            <Link href="/detail-blog">Detail Blog</Link>
+            <Link href="/blog-detail">Blog Details</Link>
           </li>
           <li className="my-4 py-4 border-b border-slate-800 hover:border-synapsis-secondary hover:rounded">
-            <Link href="/admin-blog">Admin Blog</Link>
+            <Link href="/blog-admin">Blog Admin</Link>
           </li>
         </ul>
       </div>
@@ -32,7 +32,7 @@ export default function Navbar() {
       <div className="h-10vh flex justify-between z-50 text-black lg:py-5 lg:px-36 pr-3 py-4 border-b border-gray-200">
         <div className="flex items-center flex-1">
           <div className="hidden lg:block">
-            <Link href="/">
+            <Link href="/" rel="preload">
               <Image
                 src="/images/logo.png"
                 alt="Logo synapsis"
@@ -43,7 +43,7 @@ export default function Navbar() {
             </Link>
           </div>
           <div className="lg:hidden">
-            <Link href="/">
+            <Link href="/" rel="preload">
               <Image
                 src="/images/logo.png"
                 alt="Logo synapsis"
@@ -59,13 +59,13 @@ export default function Navbar() {
           <div className="flex-10">
             <ul className="flex space-x-5 gap-2 mr-16 text-[18px]">
               <li className="transition py-1 hover:border-b-2 border-slate-900 hover:border-synapsis-primary hover:text-synapsis-primary  cursor-pointer">
-                <Link href="/list-blog">List Blog</Link>
+                <Link href="/blog-post-list">Blog Post List</Link>
               </li>
               <li className="transition py-1 hover:border-b-2 border-slate-900 hover:border-synapsis-primary hover:text-synapsis-primary  cursor-pointer">
-                <Link href="/detail-blog">Detail Blog</Link>
+                <Link href="/blog-detail">Blog Details</Link>
               </li>
               <li className="transition py-1 hover:border-b-2 border-slate-900 hover:border-synapsis-primary hover:text-synapsis-primary  cursor-pointer">
-                <Link href="/admin-blog">Admin Blog</Link>
+                <Link href="/blog-admin">Blog Admin</Link>
               </li>
             </ul>
           </div>

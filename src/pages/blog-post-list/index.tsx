@@ -28,7 +28,7 @@ export default function BlogPostList() {
     <Layout>
       <Seo templateTitle="Blog Post List" />
       {loading && <Loading />}
-      <div>
+      <div className={`${loading ? 'hidden' : ''}`}>
         <div className="pt-16 pb-10 lg:pb-20 text-center text-black">
           <p className="pb-2 font-bold text-2xl lg:text-5xl">SYNAPSIS Blog</p>
           <p className="text-lg lg:text-2xl">

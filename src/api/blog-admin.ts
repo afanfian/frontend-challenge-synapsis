@@ -1,10 +1,10 @@
 import api from '@/api/base'
 import { toast } from 'react-hot-toast'
-import { BlogPostList } from '@/utils/interfaces/BlogPostList'
+import { Users } from '@/utils/interfaces/Users'
 
-export const getBlogPostList = async (): Promise<BlogPostList[]> => {
+export const getUserBlogAdmin = async (id: number): Promise<Users[]> => {
   try {
-    const response = await api.get('posts')
+    const response = await api.get(`users/${id}`)
     const data = response.data
     return data
   } catch (error) {

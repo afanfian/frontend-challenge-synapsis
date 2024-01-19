@@ -14,7 +14,7 @@ import SortOrderSelect from '@/components/SortOrderSelect'
 import SortBySelect from '@/components/SortBySelect'
 import Loading from '@/components/Loading'
 
-const BlogDetail: React.FC = () => {
+export default function BlogDetail() {
   const [blogPosts, setBlogPosts] = useState<BlogPostListType[]>([])
   const [users, setUsers] = useState<Users[]>([])
   const [comments, setComments] = useState<Comments[]>([])
@@ -207,5 +207,3 @@ const BlogDetail: React.FC = () => {
     </Layout>
   )
 }
-
-export default BlogDetail

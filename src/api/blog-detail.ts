@@ -1,7 +1,7 @@
 import api from '@/api/base'
+import { toast } from 'react-hot-toast'
 import { Comments } from '@/utils/interfaces/Comments'
 import { Users } from '@/utils/interfaces/Users'
-import { toast } from 'react-hot-toast'
 
 export const getUsers = async (): Promise<Users[]> => {
   try {

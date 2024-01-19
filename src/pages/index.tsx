@@ -31,11 +31,11 @@ export default function Home() {
   return (
     <Layout>
       <Seo templateTitle="List Blog" />
-      <div className="pt-16 pb-20 text-center text-black">
-        <p className="pb-2 font-bold text-5xl  ">SYNAPSIS Blog</p>
-        <p className="text-2xl">Welcome to Synapsis Blog!</p>
+      <div className="pt-16 pb-10 lg:pb-20 text-center text-black">
+        <p className="pb-2 font-bold text-2xl lg:text-5xl">SYNAPSIS Blog</p>
+        <p className="text-lg lg:text-2xl">Welcome to Synapsis Blog!</p>
       </div>
-      <div className="grid md:grid-cols-3 px-36 gap-3">
+      <div className="grid md:grid-cols-3 px-5 md:px-36 pb-10 gap-3">
         {blogPosts &&
           blogPosts.map((post) => (
             <div key={post.id}>
@@ -45,10 +45,18 @@ export default function Home() {
                 width={400}
                 height={400}
                 priority
-                className="mx-auto pb-3"
+                className="hidden lg:block mx-auto pb-3"
+              />
+              <Image
+                src="/images/logo.png"
+                alt="Logo synapsis"
+                width={200}
+                height={200}
+                priority
+                className="lg:hidden mx-auto pb-3"
               />
               <p className="font-bold text-xl text-gray-800">{post.title}</p>
-              <p className="pb-5 font-medium text-lg text-gray-500">
+              <p className="pb-5 text-justify font-medium text-lg text-gray-500">
                 {truncateText(post.body, 10)}
               </p>
               <Button variant="primary">

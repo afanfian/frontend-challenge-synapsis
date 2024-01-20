@@ -1,11 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
 import { BlogPostList as BlogPostListType } from '@/utils/interfaces/BlogPostList'
-import { Users } from '@/utils/interfaces/Users'
+import { UsersInterface } from '@/utils/interfaces/Users'
 
 interface BlogPostProps {
   post: BlogPostListType
-  user: Pick<Users, 'name' | 'email'>
+  user: Pick<UsersInterface, 'name' | 'email'>
   commentName: string
   commentEmail: string
   commentBody: string

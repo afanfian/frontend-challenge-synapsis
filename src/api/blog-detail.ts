@@ -1,9 +1,9 @@
 import api from '@/api/base'
 import { toast } from 'react-hot-toast'
 import { Comments } from '@/utils/interfaces/Comments'
-import { Users } from '@/utils/interfaces/Users'
+import { UsersInterface } from '@/utils/interfaces/Users'
 
-export const getUsers = async (): Promise<Users[]> => {
+export const getUsers = async (): Promise<UsersInterface[]> => {
   try {
     const response = await api.get('users')
     const data = response.data

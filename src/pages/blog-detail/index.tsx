@@ -5,7 +5,7 @@ import { getBlogPostList } from '@/api/blog-post-list'
 import { getUsers } from '@/api/blog-detail'
 import { getComments } from '@/api/blog-detail'
 import { BlogPostList as BlogPostListType } from '@/utils/interfaces/BlogPostList'
-import { Users } from '@/utils/interfaces/Users'
+import { UsersInterface } from '@/utils/interfaces/Users'
 import { Comments } from '@/utils/interfaces/Comments'
 import BlogDetailComponent from '@/components/BlogDetail'
 import SearchInput from '@/components/SearchInput'
@@ -16,7 +16,7 @@ import Loading from '@/components/Loading'
 
 export default function BlogDetail() {
   const [blogPosts, setBlogPosts] = useState<BlogPostListType[]>([])
-  const [users, setUsers] = useState<Users[]>([])
+  const [users, setUsers] = useState<UsersInterface[]>([])
   const [comments, setComments] = useState<Comments[]>([])
   const [searchQuery, setSearchQuery] = useState<string>('')
   const [searchResults, setSearchResults] = useState<BlogPostListType[]>([])

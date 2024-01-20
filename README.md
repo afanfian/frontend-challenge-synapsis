@@ -1,40 +1,13 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Halo semua, perkenalkan saya Fian Awamiry Maulana dari Institut Teknologi Sepuluh Nopember. Disini saya sedang tahap test dalam rekruitment kerja di Synapsis. Berikut merupakan penjelasan terkait aplikasi dan desain yang sudah saya buat.
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Jika ingin melihat program saya, yaitu bisa clone project dari repository saya: https://github.com/afanfian/frontend-challenge-synapsis
+2. Jangan lupa `npm install`
+3. Setelah itu, bisa anda jalankan dengan comand `npm start` atau `yarn dev`
+4. Disini saya membuat 4 halaman, yaitu sebagai berikut:
+   1. ![Alt text](image.png)Halaman Beranda, yang berfungsi untuk menampilkan informasi blog secara singkat yang berisi gambar, judul, deskripsi, dan tombol `Read more`. Tombol `Read More` jika ditekan akan mengarah ke halaman `Blog Post List` dengan url `blog-post-list`.
+   2. ![Alt text](image-1.png)Halaman Blog Post List, yang berfungsi untuk menampilkan informasi blog lebih detail dari halaman beranda yang berisi terkait berisi gambar, judul, dan deskripsi.
+   3. ![Alt text](image-2.png)Halaman Blog Details, yang berfungsi untuk menampilkan lebih detail terkait informasi blog yang berisi gambar, judul, dan deskripsi serta dibawahnya terdapat nama, dan email pembuat blog. Selain itu, `Comment From` dari pengguna lainnya yang berisikan terkait nama, email, dan pesan komentarnya. Pada halaman Blog Details, juga terdapat `Fitur Search` yang berfungsi untuk user bisa mencari data yang diingkan berdasarkan judul, deskripsi, nama penulis, email penulis, nama pengguna yang komentar, email pengguna yang komentar, dan pesan komentar. Selain itu terdapat `Fitur Show Data` yang berfungsi untuk menampilkan banyak data sesuai dengan hasil select option atau dropdown, yaitu `5, 25, dan 50`. Terdapat `Fitur sort order` dan `Fitur Sort By` yang berfungsi untuk memudahkan pengguna melihat detail blog berdasarkan urutan terkecil atau terbesar pada `Fitur sort order` dan urutan berdasarkan judul, nama penulis, dan nama komentar pada `Fitur Sort By`.
+   4. ![Alt text](image-5.png) Halaman Blog Admin yaitu berfungsi bagi pengguna yang sudah mempunyai hak akses untuk menambah, menghapus, dan mengedit _user_. Admin bisa menambahkan data _user_ dengan menekan tombol `+` lalu akan muncul modal seperti ini dan bisa langsung mengisi _field_ nya lalu tekan tombol `Add User`. ![Alt text](image-6.png) Jika berhasil maka akan muncul notifikasi `User added successfully`. Selanjutnya, admin juga bisa menghapus data _user_ dengan menekan tombol berwarna merah dan berlogo _trash_ maka akan muncul modal seperti ini. ![Alt text](image-7.png) Jika sudah yakin untuk menghapus data user tersebut maka tekan tombol `Delete` dan akan muncul notifikasi `User deleted successfully`. Admin bisa mengedit data pengguna dengan menekan tombol berwarna kuning dan berlogo _edit_ lalu akan muncul modal seperti berikut ini dengan menampilkan data berdasarkan `id` nya.![Alt text](image-8.png) Admin bisa memperbarui data _user_ salah satu maupun semua data dan jika sudah yakin bisa menekan tombol `Update user` maka akan muncul notifikasi `User updated successfully`. Selain itu, admin juga bisa melihat secara detail informasi _user_ yang berisi nama, email, gender, dan statusnya dengan menekan tombol berwarna biru dan terdapat `icon detail`, lalu akan menampilkan data _user_ secara detail seperti contoh berikut:![Alt text](image-9.png)
+5. Terima kasih telah mencoba aplikasi, dan membaca dokumentasi yang sudah saya buat. Jika ada saran kedepannya bisa menghubungi saya melalui email: afanfian14@gmail.com.
+6. Terakhir, saya mohon maaf jika ada kekurangan dan salah kata dalam dokumentasi diatas. Terima kasih.
+7. Techstack: Next.js, Tailwind CSS, TypeScript, dan Vercel.

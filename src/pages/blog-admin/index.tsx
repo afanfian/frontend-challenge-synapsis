@@ -178,18 +178,17 @@ export default function BlogAdmin() {
                     >
                       <RiFileSearchLine className="text-sm" />
                     </Button>
-
-                    <Button
-                      variant="danger"
-                      onClick={() => openDeleteModal(user.id)}
-                    >
-                      <FaTrash className="text-sm" />
-                    </Button>
                     <Button
                       variant="warning"
                       onClick={() => openUpdateModal(user.id)}
                     >
                       <RiEditFill className="text-sm" />
+                    </Button>
+                    <Button
+                      variant="danger"
+                      onClick={() => openDeleteModal(user.id)}
+                    >
+                      <FaTrash className="text-sm" />
                     </Button>
                   </div>
                 </div>
